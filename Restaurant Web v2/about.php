@@ -1,6 +1,8 @@
 <?php
 	include "background.php";
-	echo "About.php";
-	echo "Test edit dari github2";
-	
+	echo "Proyek Tekweb [Restaurant]";
+	echo "Nama Kelompok : ";
+	echo "1) Andrew Geraldo";
+	echo "2) Kevin";
+	echo "3) Kelvin";
 ?>
