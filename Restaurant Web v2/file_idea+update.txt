@@ -1,3 +1,10 @@
 Update 
 1) Aku upload database di github
 2) Input makanan, autoincrement sesuai jumlah makanan
+
+Ide Fitur Admin
+- Set Out Of Stock
+- Add Menu Baru (done), Add gambar image dari link. Link di store ke database untuk load, link dapat dari web/ local path
+
+Request Make Account Admin
+- Buat db untuk nyimpen random text, dipake untuk pendaftaran admin, kalo udah used, status used, dan tidak bisa dipake lagi
