@@ -1,5 +1,5 @@
 Update 
-1) Aku upload database di github
+1) Upload database di github
 2) Input makanan, autoincrement sesuai jumlah makanan
 
 Ide Fitur Admin
@@ -8,3 +8,7 @@ Ide Fitur Admin
 
 Request Make Account Admin
 - Buat db untuk nyimpen random text, dipake untuk pendaftaran admin, kalo udah used, status used, dan tidak bisa dipake lagi
+
+Target Hari ini
+1) Show makanan image, interaction
+2) Maybe Input to database
