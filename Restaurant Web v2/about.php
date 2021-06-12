@@ -1,6 +1,6 @@
 <?php
 	include "background.php";
 	echo "About.php";
-	echo "Testkembalikan";
+	echo "Test edit dari github";
 	
 ?>
