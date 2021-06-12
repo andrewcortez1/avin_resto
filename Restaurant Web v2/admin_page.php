@@ -52,6 +52,7 @@ if (isset($_SESSION['name'])){
 			echo "<div class = 'col-md-4'>";
 			echo "<h3>" .$row['nama'] .",  Harga=</h3>";
 			echo "<h3>" .$row['harga'] . "</h3>";
+			echo "<img src = ".$row['link'].">";
 			echo "</div>";
 		}
 		echo "</div>";
