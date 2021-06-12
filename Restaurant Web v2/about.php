@@ -1,5 +1,7 @@
 <?php
 	include "background.php";
+	include "navbar_about.php";
+	
 	echo "Proyek Tekweb [Restaurant]";
 	echo "Nama Kelompok : ";
 	echo "1) Andrew Geraldo";
