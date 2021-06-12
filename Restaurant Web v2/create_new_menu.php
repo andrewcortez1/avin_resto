@@ -17,11 +17,13 @@
 	echo "<form method = 'post' action = 'input_menu.php'>";
 	echo "<h3>Total Menu Count : " .$counter . "<br></h3></br>";
 	echo "<h3>Input no Makanan </h1>";
-	echo "<input type = 'text' name = 'no'></br>";
+	echo "<input type = 'text' name = 'no' value = ".$counter." disabled></br>";
 	echo "<h3>Input nama Makanan: </h1>";
-	echo "<input type = 'text' name = 'nama'></br>";
+	echo "<input type = 'text' name = 'nama' value =></br>";
 	echo "<h3>Input harga makanan: </h1>" ;
 	echo "<input type = 'text' name = 'harga'>";
+	echo "<h3> Input Link Gambar makanan : </br>";
+	echo "<input type = 'text' name = 'link'><br>";
 	
 	echo "<input type = 'submit' value = 'Submit'> ";
 	echo "</form></div>";
