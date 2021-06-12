@@ -1,0 +1,3 @@
+Update 
+1) Aku upload database di github
+2) Input makanan, autoincrement sesuai jumlah makanan

@@ -16,6 +16,7 @@
 	echo "<div class='d-flex justify-content-center'>";
 	echo "<form method = 'post' action = 'input_menu.php'>";
 	echo "<h3>Total Menu Count : " .$counter . "<br></h3></br>";
+	$counter+=1;
 	echo "<h3>Input no Makanan </h1>";
 	echo "<input type = 'text' name = 'no' value = ".$counter." disabled></br>";
 	echo "<h3>Input nama Makanan: </h1>";
