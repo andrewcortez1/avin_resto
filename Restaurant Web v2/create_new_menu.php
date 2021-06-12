@@ -28,6 +28,7 @@
 	echo "<input type = 'text' name = 'link'><br>";
 	
 	echo "<input type = 'submit' value = 'Submit'> ";
+	
 	echo "</form></div>";
 
 ?>

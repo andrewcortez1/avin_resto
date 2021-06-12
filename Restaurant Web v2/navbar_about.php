@@ -6,8 +6,14 @@ echo '
 		        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		            <h3 class="navbar-text"style="margin-left : 14px; margin-right : 20px">Welcome , '.$_SESSION['name'].'</h3>
 		            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+		             <li class="nav-item">
+		                    <a class ="nav-link active " href="admin_page.php">View Makanan</a>
+		                  </li>
+		                  <li class="nav-item">
+		                    <a class ="nav-link " href="view_minuman.php">View Minuman</a>
+		                  </li>
 		                <li class="nav-item">
-		                    <a class ="nav-link" href="admin.php">View Pesanan</a>
+		                    <a class ="nav-link" href="admin_pagephp">View Pesanan</a>
 		                  </li>
 		                  <li class="nav-item">
 		                    <a class="nav-link" href="setting_account.php">Setting Account</a>

@@ -12,3 +12,10 @@ Request Make Account Admin
 Target Hari ini
 1) Show makanan image, interaction
 2) Maybe Input to database
+
+Target Besok
+1) Mulai masuk customer
+2) 
+
+Target Besok-besok lagi
+1) Pembayaran
