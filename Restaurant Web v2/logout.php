@@ -1,3 +1,5 @@
 <?php
-	echo "Logout belum dibuat";
+	session_start();
+	session_destroy();
+	header("location:main_menu.php");
 ?>
