@@ -57,8 +57,8 @@ if (isset($_SESSION['name'])){
   echo "<div class = 'row'>";
   while ($row = mysqli_fetch_array($get_data)){
    echo "<div class = 'col-md-4'>";
-   echo "<h3 style = 'text-align:center'>" .$row['nama'] .",  Harga=</h3>";
-   echo "<h3 style = 'text-align:center'>" .$row['harga'] . "</h3>";
+   echo "<h3 style = 'text-align:center'>" .$row['nama'] ."</h3>";
+   echo "<h3 style = 'text-align:center'>Harga = " .$row['harga'] . "</h3>";
    echo "<img class = 'rounded mx-auto d-block' src = ".$row['link'].">";
 
    echo "<br>";

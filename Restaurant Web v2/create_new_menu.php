@@ -1,7 +1,7 @@
 <?php
 	include "background.php";
 	include "connection.php";
-	include "navbar_about.php";
+	
 	//echo ' <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">';
 	$count = mysqli_query($resto, "SELECT *FROM menu");
 	$counter =0;
@@ -15,7 +15,29 @@
 	
 
 	</style>";
-
+	echo '
+		        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		            <h3 class="navbar-text"style="margin-left : 14px; margin-right : 20px">Welcome , '.$_SESSION['name'].'</h3>
+		            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+		                <li class="nav-item">
+		                    <a class ="nav-link " href="admin_page.php">View Makanan</a>
+		                  </li>
+		                  <li class="nav-item">
+		                    <a class ="nav-link " href="view_minuman.php">View Minuman</a>
+		                  </li>
+		                  <li class="nav-item">
+		                    <a class="nav-link" href="setting_account.php">Setting Account</a>
+		                  </li>
+		                  <li class="nav-item">
+		                    <a class="nav-link " href="about.php">About</a>
+		                  </li>
+		                   <li class="nav-item">
+		                    <a class="nav-link Active" href="create_new_menu.php">Create New Menu</a>
+		                  </li>
+		                  <li class="nav-item">
+		                    <a class="nav-link" href="logout.php">Logout</a>
+		                  </li>
+		        </nav><br><br>';
 	echo "<div class='d-flex justify-content-center'>";
 	echo "<form method = 'post' action = 'input_menu.php'>";
 	echo "<h3>Total Menu Count : " .$counter . "<br></h3></br>";
