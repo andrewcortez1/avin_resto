@@ -52,7 +52,7 @@ h2{
 			<div class="mb-3 row">
 				<label for="Username" class="col-sm-4 col-form-label" id = "kasiwarna">Username</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control" name="username" placeholder="Username" value = '.$_SESSION['name'].'>
+					<input type="text" class="form-control" name="username" placeholder="Username" value = '.$_SESSION['name'].' >
 				</div>
 			</div>
 			<div class="mb-3 row">
@@ -83,7 +83,5 @@ h2{
 			echo "<h2>Username dengan setting account tidak sesuai</h2>";
 		}
 	}
-
-
 
 ?>
