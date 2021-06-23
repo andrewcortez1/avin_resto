@@ -16,35 +16,39 @@
           background-size: 100% 100%;
     }
     #btn1{
-      position : absolute;
-      top : 500px;
-      left : 590px;
-      height: 300px;
+      height: 100px;
       width : 600px;
-      text-align: center;
+      margin-left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
     }
     #btn2{
-      position : absolute;
-      top : 500px;
-      left : 1400px;
-      height: 300px;
+      height: 100px;
       width : 600px;
+      margin-left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
     }
+
     h1 {
+      font-size: 80pt;
       text-align :center;
       color : aqua;
     }
     </style>
     </head>
     <body>
+      <br>
       <h1> AVinResto </h1>
-      <form action = "customer.php" method = "post">
+      <div class="d-grid gap-2 col-6 mx-auto" style="margin-top: 150px;">
+        <form action = "customer.php" method = "post">
           <button type="submit" class="btn btn-outline-success" id = "btn1">Customer</button>
       </form>
+      <br>
+      <br>
       <form method = "post" action = "admin.php">
           <button type="submit" class="btn btn-outline-success" id = "btn2">Admin</button>
       </form>
-          
+          </div>
     </body>
 </html>
-     

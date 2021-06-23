@@ -27,15 +27,17 @@
 </head>
 <body>
   <h1> Customer </h1>
-  <form class="form-inline">
-      <div class="form-group mb-2">
-          <label for="inputPassword" class="col-sm-5 col-form-label">Input Name :</label>
-            <div class="col-lg-5">
-                <input type="text" class="form-control" id="inputPassword" placeholder="Your Name">
+  <div class = "row">
+    <div class = "col-6">
+  <form action = "dine.php" method = "post">
+  <input type = "submit" value = "dine.php">
+</form>
+</div>
 
-                <a class="btn btn-primary" href="dine.php" role="button">Dine In </a>
-                <a class="btn btn-primary" href="take.php" role="button">Take Away </a>
-            </div>
-      </div>
-  </form>
+<div class = "col-6">
+<form action = "takeaway.php" method = "post">
+  <input type = "submit" value = "takwaway.php">
+</form>
+</div>
+
 </body>

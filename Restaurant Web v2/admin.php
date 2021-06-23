@@ -24,11 +24,21 @@
     .btn-primary{
     	width : 280px;
     }
+    h3{
+    	color : red;
+    	font-size : 20px;
+    	text-align : center;
+    }
+    h2{
+    	color : red;
+    	font-size : 15px;
+    	text-align : center;
+    }
 </style>
 <body>
 	<div class="container">	
 		<center>
-		<form method="post" action="givesession.php">	
+		<form method="post">	
 		<div class="bg-transparent p-5 rounded-lg m-3" style="width: 700px;">
 			<h1 class="display-4">AVinResto Admin</h1>
 			<br><br>
@@ -57,3 +67,25 @@
 
 </body>
 </html>
+
+<?php
+	session_start();
+	if (isset($_POST['signin'])){
+		$_SESSION['name']=$_POST['username'];
+		$_SESSION['pass']=$_POST['password'];
+		$var_name = $_POST['username'];
+		$var_pass = $_POST['password'];
+		
+		$con = mysqli_connect("localhost", "root", "" , "restoran_db");
+		$query = mysqli_query($con, "select * from admin WHERE username = '$var_name' and password = '$var_pass' ");
+		$count = mysqli_num_rows($query);
+		if ($count == 1){
+			header('Location: admin_page.php');
+		}
+		else {
+			echo "<h3>Username /Password Salah</h3>";
+			echo "<h2> Perhatikan Upercase dan Lowercase Letter </h2>";
+		}
+	}
+
+?>

@@ -23,12 +23,6 @@ img {
 
     </style>';
 
-if (isset($_SESSION['name'])){
- $username=$_SESSION['name'];
- $password=$_SESSION['pass'];
- $query=mysqli_query($resto,"select * from admin where username='$username' and password='$password'");
- $count=mysqli_num_rows($query);
- if ($count == 1){
   echo '
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
               <h3 class="navbar-text"style="margin-left : 14px; margin-right : 20px">Welcome , '.$_SESSION['name'].'</h3>
@@ -64,11 +58,5 @@ if (isset($_SESSION['name'])){
    echo "<br>";
    echo "<br>";
    echo "</div>";
-  }
-  echo "</div>";
  }
- else {
-  header("location:admin.php");
- }
-}
 ?>
