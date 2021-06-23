@@ -15,6 +15,22 @@
       text-align :center;
       color : aqua;
     }
+    #dine{
+       height: 100px;
+      width : 600px;
+      margin-left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      font-size: 30pt;
+    }
+    #take{
+       height: 100px;
+      width : 600px;
+      margin-left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      font-size: 30pt;
+    }
     .form-group{
       position : absolute;
       left : 1000px;
@@ -27,16 +43,14 @@
 </head>
 <body>
   <h1> Customer </h1>
-  <div class = "row">
-    <div class = "col-6">
+   <div class="d-grid gap-2 col-6 mx-auto" style="margin-top: 150px;">
   <form action = "dine.php" method = "post">
-  <input type = "submit" value = "dine.php">
+  <input type = "submit" value = "Dine In" id="dine">
 </form>
-</div>
-
-<div class = "col-6">
+<br>
+<br>
 <form action = "takeaway.php" method = "post">
-  <input type = "submit" value = "takwaway.php">
+  <input type = "submit" value = "Take Away" id="take">
 </form>
 </div>
 

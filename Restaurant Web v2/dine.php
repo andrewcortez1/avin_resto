@@ -17,6 +17,7 @@ img {
 echo "hai";
 $get_data = mysqli_query($resto, "SELECT * FROM menu");
 $counter = 0;
+echo '<form action = "checkout.php" method = "post">';
   echo "<div class = 'row'>";
   while ($row = mysqli_fetch_array($get_data)){
     $counter++;
@@ -48,9 +49,11 @@ echo '
     </div>
   </div>
 </div>';
-echo '<input type="text" id="points" name='.$row[0].' step="1">';
+echo '<input type="text" id="points" name='.$counter.' step="1">';
    echo "</div>";
   }
   echo "</div>";
+  echo '<input type = "submit">';
+echo '</form>';
 
 ?>
