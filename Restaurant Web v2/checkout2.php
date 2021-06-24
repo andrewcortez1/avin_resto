@@ -13,9 +13,8 @@ echo'<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min
 // }
 // return $count++;
 //}
+
 //makanan
- //checkout dari dine in
- //checkout2 dari takeaway
 $pelanggan = $_POST['pelanggan'];
 
 $ayam_goreng = $_POST['1'];
@@ -45,7 +44,8 @@ $air_mineral = $_POST['18'];
     $hitung++;
   }
   $hitung++;
-  mysqli_query($resto, "insert into pembayaran values ('$hitung', '$pelanggan','Dine In', 'Processing', 'Ready')");
+   mysqli_query($resto, "insert into pembayaran values ('$hitung', '$pelanggan','Take Away', 'Processing', 'Ready')");
+
 
 echo '<table class="table">
   <thead class="thead-dark">
@@ -91,7 +91,7 @@ if ($ayam_goreng >=1){
  }
  $count++;
 
- mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '1', '$ayam_goreng', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '1', '$ayam_goreng', 'Take Away', 'Belum Bayar')");
 }
 if ($nasi_goreng >=1){
  echo ' <tr>
@@ -107,7 +107,7 @@ if ($nasi_goreng >=1){
  }
  $count++;
 
- mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '1', '$nasi_goreng', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '1', '$nasi_goreng', 'Take Away', 'Belum Bayar')");
 }
 if ($nasi_uduk >=1){
  echo ' <tr>
@@ -123,7 +123,7 @@ if ($nasi_uduk >=1){
  }
  $count++;
 
- mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '2', '$nasi_uduk', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '2', '$nasi_uduk', 'Take Away', 'Belum Bayar')");
 }
 if ($nasi_empal >=1){
  echo ' <tr>
@@ -141,7 +141,7 @@ if ($nasi_empal >=1){
  }
  $count++;
 
- mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '3', '$nasi_empal', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '3', '$nasi_empal', 'Take Away', 'Belum Bayar')");
 }
 if ($ayam_geprek>=1){
  echo ' <tr>
@@ -158,7 +158,7 @@ if ($ayam_geprek>=1){
  }
  $count++;
 
- mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '4', '$ayam_geprek', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '4', '$ayam_geprek', 'Take Away', 'Belum Bayar')");
 }
 if ($steak >=1){
  echo ' <tr>
@@ -175,7 +175,7 @@ if ($steak >=1){
  }
  $count++;
 
- mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '5', '$steak', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '5', '$steak', 'Take Away', 'Belum Bayar')");
 }
 if ($burger >=1){
  echo ' <tr>
@@ -191,7 +191,7 @@ if ($burger >=1){
  }
  $count++;
 
- mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '6', '$burger', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '6', '$burger', 'Take Away', 'Belum Bayar')");
 } 
 if ($indomie_kuah >=1){
  echo ' <tr>
@@ -208,7 +208,7 @@ if ($indomie_kuah >=1){
  }
  $count++;
 
- mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '7', '$indomie_kuah', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '7', '$indomie_kuah', 'Take Away', 'Belum Bayar')");
 }
 if ($indomie >=1){
  echo ' <tr>
@@ -225,7 +225,7 @@ if ($indomie >=1){
  }
  $count++;
 
- mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '8', '$indomie', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '8', '$indomie', 'Take Away', 'Belum Bayar')");
 }
 if ($kusuka >=1){
  echo ' <tr>
@@ -242,7 +242,7 @@ if ($kusuka >=1){
  }
  $count++;
  
- mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '9', '$kusuka', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '9', '$kusuka', 'Take Away', 'Belum Bayar')");
 }
 
 //minuman
@@ -259,7 +259,7 @@ if ($smirnoff >=1){
  while ($row = mysqli_fetch_array($get_data)){
   $count++;
  }
- mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '1', '$smirnoff', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '1', '$smirnoff', 'Take Away', 'Belum Bayar')");
 }
 
 if ($iceland >=1){
@@ -274,7 +274,7 @@ if ($iceland >=1){
  while ($row = mysqli_fetch_array($get_data)){
   $count++;
  }
- mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '2', '$iceland', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '2', '$iceland', 'Take Away', 'Belum Bayar')");
 
 }
 
@@ -290,7 +290,7 @@ if ($mohito >=1){
  while ($row = mysqli_fetch_array($get_data)){
   $count++;
  }
- mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '3', '$mohito', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '3', '$mohito', 'Take Away', 'Belum Bayar')");
 
 }
 if ($es_teh >=1){
@@ -306,7 +306,7 @@ if ($es_teh >=1){
  while ($row = mysqli_fetch_array($get_data)){
   $count++;
  }
- mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '4', '$es_teh', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '4', '$es_teh', 'Take Away', 'Belum Bayar')");
 
 }
 
@@ -323,7 +323,7 @@ if ($es_jeruk >=1){
  while ($row = mysqli_fetch_array($get_data)){
   $count++;
  }
- mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '5', '$es_jeruk', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '5', '$es_jeruk', 'Take Away', 'Belum Bayar')");
 }
 if ($jus_alpukat >=1){
  echo ' <tr>
@@ -337,7 +337,7 @@ if ($jus_alpukat >=1){
  while ($row = mysqli_fetch_array($get_data)){
   $count++;
  }
- mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '6', '$jus_alpukat', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '6', '$jus_alpukat', 'Take Away', 'Belum Bayar')");
 }
 if ($jus_stoberi >=1){
  echo ' <tr>
@@ -352,7 +352,7 @@ if ($jus_stoberi >=1){
  while ($row = mysqli_fetch_array($get_data)){
   $count++;
  }
- mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '7', '$jus_stoberi', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '7', '$jus_stoberi', 'Take Away', 'Belum Bayar')");
 }
 
 if ($air_mineral >=1){
@@ -368,7 +368,7 @@ if ($air_mineral >=1){
  while ($row = mysqli_fetch_array($get_data)){
   $count++;
  }
- mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '8', '$air_mineral', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '8', '$air_mineral', 'Take Away', 'Belum Bayar')");
 }
 echo ' </tbody>
 </table>';

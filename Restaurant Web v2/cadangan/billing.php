@@ -13,7 +13,7 @@ if(isset($_POST['showtable'])){
     <td>".$row[1]."</td>
     <td>".$row[2]."</td>
     <td>".$row[3]."</td>
-    <td><a ide='$row[0]' class='edit' href='#?ide=$row[0]'><button type='button' class='btn btn-success'>Click</button></a></td>
+    <td><a ide='$row[0]' class='edit' href='#?ide=$row[0]'><button type='button' class='btn btn-success'>Edit</button></a></td>
     <td><a idd='$row[0]' class='turunharga' href='#?idd=$row[0]'><button type='button' class='btn btn-primary' >View Pesanan</button></a></td>
     <td><a idd='$row[0]' class='delmenu' href='#?idd=$row[0]'><button type='button' class='btn btn-primary' >Finish</button></a></td>
    </tr>";
@@ -22,11 +22,10 @@ if(isset($_POST['showtable'])){
 }
 
 if(isset($_POST['showdata2'])){
-  echo "<form action = 'bayar.php' method = 'post' >";
-  $tot_harga =0;
+
 $id=$_POST['nama']; 
  $sql="select p.no, p.no_menu,p.qty ,m.nama, m.harga,  m.harga*p.qty AS 'Total Harga'
-FROM pesanan_makanan p JOIN menu m ON (p.no_menu = m.no_menu) 
+FROM pesanan_makanan p JOIN menu m ON (p.no_menu = m.no_menu)
 WHERE p.nama = '$id'";
  $result=mysqli_query($resto,$sql);
  echo '<table class="table">
@@ -52,9 +51,7 @@ WHERE p.nama = '$id'";
     <td>".$row[4]."</td>
     <td>".$row[5]."</td>
    </tr>";
-   $tot_harga += $row[5];
  } 
- 
  $det_minum="select p.no, p.no_minum,p.qty ,m.nama, m.harga,  m.harga*p.qty AS 'Total Harga'
  FROM pesanan_minuman p JOIN menu_minuman m ON (p.no_minum = m.no_minuman)
  WHERE p.nama = '$id'";
@@ -69,17 +66,13 @@ WHERE p.nama = '$id'";
     <td>".$rows[4]."</td>
     <td>".$rows[5]."</td>
    </tr>";
-   $tot_harga+= $rows[5];
  }
- echo "Total Harga : ";
- echo "<input type ='submit' value ='$tot_harga' name = 'pay'> ";
- echo "</form>";
  exit();
 }
 if(isset($_POST['editvalue'])){
  
  $id=$_POST['id']; 
- $sql="select * from pembayaran where nomor = '$id'";
+ $sql="select * from pesanan_makanan where no = '$id'";
  $result=mysqli_query($resto,$sql);
  $row=mysqli_fetch_array($result); 
  header("content-type: text/x-json");
@@ -140,9 +133,22 @@ if(isset($_POST['delete_db'])){
      <input type="text" class="form-control" id="nama" disabled = "disabled">
     </div>
    </div>
+   <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Jenis Pemesanan</label>
+    <div class="col-sm-4">
+     <input type="text" class="form-control" id="alamat">
+    </div>
+   </div>
+   <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Keterangan</label>
+    <div class="col-sm-4">
+     <input type="text" class="form-control" id="umur">
+    </div>
+   </div>
    <div class="row">
     <div class="col-sm-4 offset-md-2">
-    
+     
+     <button type="button" class="btn btn-primary" id="update" value="Update">Update</button>
     </div>
    </div>
   </div>
@@ -184,8 +190,10 @@ $(document).ready(function(){
       id     : idedit 
    },
    success : function(res){
-    $('#id').val(res.nomor);
-    $('#nama').val(res.nama_cust);
+    $('#id').val(res.no_menu);
+    $('#nama').val(res.nama);
+    $('#alamat').val(res.jenis_pesanan);
+    $('#umur').val(res.keterangan);
    }
   }); 
  });

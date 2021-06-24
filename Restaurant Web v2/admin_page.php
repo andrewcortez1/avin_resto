@@ -42,10 +42,17 @@ img {
                      <li class="nav-item">
                       <a class="nav-link" href="create_new_menu.php">Create New Menu</a>
                     </li>
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="create_new_minuman.php">Create New Drink</a>
+                    </li>
                      <li class="nav-item">
                       <a class="nav-link" href="ajaxchange.php">Change Harga</a>
                     </li>
-                    <li class="nav-item">
+                     <li class="nav-item">
+                      <a class="nav-link" href="billing.php">Billing Page </a>
+                    </li>
+                     <li class="nav-item">
                       <a class="nav-link" href="logout.php">Logout</a>
                     </li>
           </nav><br><br>';

@@ -34,8 +34,15 @@
 		                   <li class="nav-item">
 		                    <a class="nav-link Active" href="create_new_menu.php">Create New Menu</a>
 		                  </li>
+		                  </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="create_new_minuman.php">Create New Drink</a>
+                    </li>
 		                   <li class="nav-item">
                       <a class="nav-link" href="ajaxchange.php">Change Harga</a>
+                    </li>
+                      <li class="nav-item">
+                      <a class="nav-link" href="billing.php">Billing Page</a>
                     </li>
 		                  <li class="nav-item">
 		                    <a class="nav-link" href="logout.php">Logout</a>
@@ -56,7 +63,6 @@
 	echo "<input type = 'text' name = 'link'><br>";
 	
 	echo "<input type = 'submit' value = 'Submit Makanan' name = 'submit_makanan' id ='submitan'> ";
-	echo "<input type = 'submit' value = 'Submit Minuman' name = 'submit_minuman' id = 'submitan'>";
 	
 	echo "</form></div>";
 

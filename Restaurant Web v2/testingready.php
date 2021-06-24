@@ -44,7 +44,6 @@ $counter = 0;
 		echo "<h3 style = 'text-align:center'>" .$row['no_meja'];
    		echo "<h3 style = 'text-align:center'>Status = " .$row['status'] . "</h3>";
    		echo '<img src="no.jpg " class = "rounded mx-auto d-block">';
-   		echo "<h3 style = 'text-align:center'>" .$row['no_meja'];
 	}
    echo "<br>";
    echo "<br>";
