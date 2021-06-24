@@ -7,12 +7,12 @@ echo'<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min
  <script src="../jQuery.js"></script>';
 
 //function hitung (){
-//	$count=0;
-//	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
-//	while ($row = mysqli_fetch_array($get_data)){
-//		$count++;
-//	}
-//	return $count++;
+// $count=0;
+// $get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
+// while ($row = mysqli_fetch_array($get_data)){
+//  $count++;
+// }
+// return $count++;
 //}
 
 //makanan
@@ -67,187 +67,283 @@ echo "Jus Alpukat :" .$jus_alpukat ."</br>";
 echo "Jus Stoberi :" .$jus_stoberi ."</br>";;
 echo "Air_mineral : " .$air_mineral."</br>" ; 
 
+$no_pesanan =0;
 if ($nasi_goreng >=1){
-	echo ' <tr>
-      <th scope="row">1</th>
+ echo ' <tr>
+      <th scope="row">'.$no_pesanan'</th>
       <td>Nasi Goreng</td>
       <td>'.$nasi_goreng.'</td>
     </tr>';
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	$count++;
+    $no_pesanan++;
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ $count++;
 
-	mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '1', '$nasi_goreng', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '1', '$nasi_goreng', 'Dine In', 'Belum Bayar')");
 }
 if ($nasi_uduk >=1){
-	echo ' <tr>
+ echo ' <tr>
       <th scope="row">1</th>
-      <td>Nasi Goreng</td>
+      <td>Nasi Uduk</td>
       <td>'.$nasi_uduk.'</td>
     </tr>';
 
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	$count++;
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ $count++;
 
-	mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '2', '$nasi_uduk', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '2', '$nasi_uduk', 'Dine In', 'Belum Bayar')");
 }
 if ($nasi_empal >=1){
-	echo ' <tr>
+ echo ' <tr>
       <th scope="row">1</th>
-      <td>Nasi Goreng</td>
-      <td>'.$nasi_uduk.'</td>
+      <td>Nasi Empal</td>
+      <td>'.$nasi_empal.'</td>
     </tr>';
 
 
-	
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	$count++;
+ 
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ $count++;
 
-	mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '3', '$nasi_empal', 'Dine In', 'Belum Bayar')");
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '3', '$nasi_empal', 'Dine In', 'Belum Bayar')");
 }
 if ($ayam_geprek>=1){
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	$count++;
+ echo ' <tr>
+      <th scope="row">1</th>
+      <td>Ayam Gprek</td>
+      <td>'.$ayam_geprek.'</td>
+    </tr>';
 
-	mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '4', '$ayam_geprek', 'Dine In', 'Belum Bayar')");
+
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ $count++;
+
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '4', '$ayam_geprek', 'Dine In', 'Belum Bayar')");
 }
 if ($steak >=1){
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	$count++;
+ echo ' <tr>
+      <th scope="row">1</th>
+      <td>Steak</td>
+      <td>'.$steak.'</td>
+    </tr>';
 
-	mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '5', '$steak', 'Dine In', 'Belum Bayar')");
+
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ $count++;
+
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '5', '$steak', 'Dine In', 'Belum Bayar')");
 }
 if ($burger >=1){
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	$count++;
+ echo ' <tr>
+      <th scope="row">1</th>
+      <td>Burger</td>
+      <td>'.$burger.'</td>
+    </tr>';
 
-	mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '6', '$burger', 'Dine In', 'Belum Bayar')");
-}	
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ $count++;
+
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '6', '$burger', 'Dine In', 'Belum Bayar')");
+} 
 if ($indomie_kuah >=1){
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	$count++;
+ echo ' <tr>
+      <th scope="row">1</th>
+      <td>Indomie Kuah</td>
+      <td>'.$indomie_kuah.'</td>
+    </tr>';
 
-	mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '7', '$indomie_kuah', 'Dine In', 'Belum Bayar')");
+
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ $count++;
+
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '7', '$indomie_kuah', 'Dine In', 'Belum Bayar')");
 }
 if ($indomie >=1){
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	$count++;
+ echo ' <tr>
+      <th scope="row">1</th>
+      <td>Indomie Goreng</td>
+      <td>'.$indomie.'</td>
+    </tr>';
 
-	mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '8', '$indomie', 'Dine In', 'Belum Bayar')");
+
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ $count++;
+
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '8', '$indomie', 'Dine In', 'Belum Bayar')");
 }
 if ($kusuka >=1){
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	$count++;
-	
-	mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '9', '$kusuka', 'Dine In', 'Belum Bayar')");
+ echo ' <tr>
+      <th scope="row">1</th>
+      <td>Kusuka</td>
+      <td>'.$kusuka.'</td>
+    </tr>';
+
+
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_makanan");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ $count++;
+ 
+ mysqli_query($resto, "INSERT INTO pesanan_makanan values ($count ,'$pelanggan', '9', '$kusuka', 'Dine In', 'Belum Bayar')");
 }
 
 //minuman
 if ($smirnoff >=1){
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_minuman");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '1', '$smirnoff', 'Dine In', 'Belum Bayar')");
+ echo ' <tr>
+      <th scope="row">1</th>
+      <td>Smirnoff</td>
+      <td>'.$smirnoff.'</td>
+    </tr>';
+
+
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_minuman");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '1', '$smirnoff', 'Dine In', 'Belum Bayar')");
 }
 
 if ($iceland >=1){
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_minuman");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '2', '$iceland', 'Dine In', 'Belum Bayar')");
+ echo ' <tr>
+      <th scope="row">1</th>
+      <td>Iceland</td>
+      <td>'.$iceland.'</td>
+    </tr>';
+
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_minuman");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '2', '$iceland', 'Dine In', 'Belum Bayar')");
 
 }
 
 if ($mohito >=1){
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_minuman");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '3', '$mohito', 'Dine In', 'Belum Bayar')");
+ echo ' <tr>
+      <th scope="row">1</th>
+      <td>Mohito</td>
+      <td>'.$mohito.'</td>
+    </tr>';
+
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_minuman");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '3', '$mohito', 'Dine In', 'Belum Bayar')");
 
 }
 if ($es_teh >=1){
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_minuman");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '4', '$es_teh', 'Dine In', 'Belum Bayar')");
+ echo ' <tr>
+      <th scope="row">1</th>
+      <td>Es Teh Manis</td>
+      <td>'.$es_teh.'</td>
+    </tr>';
+
+
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_minuman");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '4', '$es_teh', 'Dine In', 'Belum Bayar')");
 
 }
 
 if ($es_jeruk >=1){
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_minuman");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '5', '$es_jeruk', 'Dine In', 'Belum Bayar')");
+ echo ' <tr>
+      <th scope="row">1</th>
+      <td>Es Jeruk</td>
+      <td>'.$es_jeruk.'</td>
+    </tr>';
+
+
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_minuman");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '5', '$es_jeruk', 'Dine In', 'Belum Bayar')");
 }
 if ($jus_alpukat >=1){
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_minuman");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '6', '$jus_alpukat', 'Dine In', 'Belum Bayar')");
+ echo ' <tr>
+      <th scope="row">1</th>
+      <td>Jus Alpukat</td>
+      <td>'.$jus_alpukat.'</td>
+    </tr>';
+
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_minuman");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '6', '$jus_alpukat', 'Dine In', 'Belum Bayar')");
 }
 if ($jus_stoberi >=1){
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_minuman");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '7', '$jus_stoberi', 'Dine In', 'Belum Bayar')");
+ echo ' <tr>
+      <th scope="row">1</th>
+      <td>Jus Stroberi</td>
+      <td>'.$jus_stroberi.'</td>
+    </tr>';
+
+
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_minuman");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '7', '$jus_stoberi', 'Dine In', 'Belum Bayar')");
 }
 
 if ($air_mineral >=1){
-	$count=0;
-	$get_data = mysqli_query($resto, "SELECT * FROM pesanan_minuman");
-	while ($row = mysqli_fetch_array($get_data)){
-		$count++;
-	}
-	mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '8', '$air_mineral', 'Dine In', 'Belum Bayar')");
+ echo ' <tr>
+      <th scope="row">1</th>
+      <td>Air Mineral</td>
+      <td>'.$air_mineral.'</td>
+    </tr>';
+
+
+ $count=0;
+ $get_data = mysqli_query($resto, "SELECT * FROM pesanan_minuman");
+ while ($row = mysqli_fetch_array($get_data)){
+  $count++;
+ }
+ mysqli_query($resto, "INSERT INTO pesanan_minuman values ($count ,'$pelanggan', '8', '$air_mineral', 'Dine In', 'Belum Bayar')");
 }
 echo ' </tbody>
 </table>';

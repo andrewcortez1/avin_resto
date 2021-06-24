@@ -35,5 +35,4 @@
 	echo "<h3> 2) Kevin </h3> ";
 	echo "<h3> 3) Kelvin </h3> ";
 	echo "<h3> Dosen : Indro Setiawan</h3>";
-	echo "<h3>Alex (Penonton) </h3> ";
 ?>
