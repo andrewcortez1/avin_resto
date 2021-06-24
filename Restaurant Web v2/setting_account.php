@@ -34,6 +34,9 @@ h2{
                      <li class="nav-item">
                       <a class="nav-link" href="create_new_menu.php">Create New Menu</a>
                     </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="ajaxchange.php">Change Harga</a>
+                    </li>
                     <li class="nav-item">
                       <a class="nav-link" href="logout.php">Logout</a>
                     </li>

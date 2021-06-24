@@ -25,3 +25,9 @@ IDE = Kalo Password Setting Password Salah kasi Tulisan Salah Pake cara session.
 
 
 DATABASE menu tak tambahi unique identifier
+
+Ide : Pembayaran nda pake ajax, 
+ngambil dari table pembayaran join table
+pembayaran_makanan, dan pembayaran minuman
+
+Ajax Dipake Untuk Update Menu

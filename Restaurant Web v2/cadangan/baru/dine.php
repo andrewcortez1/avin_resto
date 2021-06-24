@@ -17,24 +17,7 @@ img {
   height : 30px;  
 }
 </style>";
-if (isset($_POST['1'])){
-    mysqli_query($resto, "update meja set status ='not_ready' where no_meja =1");
-  }
-  if (isset($_POST['2'])){
-    mysqli_query($resto, "update meja set status ='not_ready' where no_meja =2");
-  }
-  if (isset($_POST['3'])){
-    mysqli_query($resto, "update meja set status ='not_ready' where no_meja =3");
-  }
-  if (isset($_POST['4'])){
-    mysqli_query($resto, "update meja set status ='not_ready' where no_meja =4");
-  }
-  if (isset($_POST['5'])){
-    mysqli_query($resto, "update meja set status ='not_ready' where no_meja =5");
-  }
-  if (isset($_POST['6'])){
-    mysqli_query($resto, "update meja set status ='not_ready' where no_meja =6");
-  }
+echo "hai";
 $get_data = mysqli_query($resto, "SELECT * FROM menu");
 $get_minuman = mysqli_query($resto, "SELECT * FROM menu_minuman");
 $counter = 0;

@@ -44,7 +44,7 @@
 <body>
   <h1> Customer </h1>
    <div class="d-grid gap-2 col-6 mx-auto" style="margin-top: 150px;">
-  <form action = "dine.php" method = "post">
+  <form action = "testingready.php" method = "post">
   <input type = "submit" value = "Dine In" id="dine">
 </form>
 <br>
