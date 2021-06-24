@@ -49,7 +49,7 @@
 </form>
 <br>
 <br>
-<form action = "takeaway.php" method = "post">
+<form action = "takeaway_food.php" method = "post">
   <input type = "submit" value = "Take Away" id="take">
 </form>
 </div>

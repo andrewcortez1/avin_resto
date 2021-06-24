@@ -21,3 +21,7 @@ Target Besok-besok lagi
 1) Pembayaran
 
 IDE = Kalo Password Setting Password Salah kasi Tulisan Salah Pake cara session.
+
+
+
+DATABASE menu tak tambahi unique identifier

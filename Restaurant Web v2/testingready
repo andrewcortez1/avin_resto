@@ -1,0 +1,5 @@
+<?php
+
+$get_data = mysqli_query($resto, "SELECT * FROM meja");
+
+?>

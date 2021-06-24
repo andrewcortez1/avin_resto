@@ -13,20 +13,12 @@ img {
  width : 400px;
  height : 300px;
 }
-#inputan{
-  width : 200px;
-  height : 30px;
-}
 </style>";
 echo "hai";
 $get_data = mysqli_query($resto, "SELECT * FROM menu");
-$get_minuman = mysqli_query($resto, "SELECT * FROM menu_minuman");
 $counter = 0;
 echo '<form action = "checkout.php" method = "post">';
-  //echo "<input type = 'text' name = 'pelanggan'> ";
-  echo "<input type='text' class='form-control' name='pelanggan' placeholder='Input Nama Anda' id = 'inputan' required oninvalid='this.setCustomValidity('Input username di field ini')' oninput='setCustomValidity('')''>";
   echo "<div class = 'row'>";
-
   while ($row = mysqli_fetch_array($get_data)){
     $counter++;
    echo "<div class = 'col-md-4'>";
@@ -43,33 +35,9 @@ echo '<form action = "checkout.php" method = "post">';
 echo '<input type="number" id="points" name='.$counter.' step="1">';
    echo "</div>";
   }
-  //echo "</div>";
-
-  while ($row = mysqli_fetch_array($get_minuman)){
-    $counter++;
-    echo "<div class = 'col-md-4'>";
-   echo "<h3 style = 'text-align:center'>" .$row['nama'];
-   echo "<h3 style = 'text-align:center'>Harga = " .$row['harga'] . "</h3>";
-   echo "<img class = 'rounded mx-auto d-block' src = ".$row['link'].">";
-   echo "<br>";
-   echo "<br>";
-   echo '<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#abc'.$counter.'">
-  Launch demo modal
-</button>';
-echo '<input type="number" id="points" name='.$counter.' step="1">';
- echo "</div>";
-  }
   echo "</div>";
   echo '<input type = "submit">';
 echo '</form>';
-
-
-
-
-
-
-
 
 echo '  
 <div class="modal fade" id="abc1" tabindex="-1" aria-labelledby="abc1" aria-hidden="true">
